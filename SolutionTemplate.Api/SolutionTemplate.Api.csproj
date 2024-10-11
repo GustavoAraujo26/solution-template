@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SolutionTemplate.Domain\SolutionTemplate.Domain.csproj" />
     <ProjectReference Include="..\SolutionTemplate.Handlers\SolutionTemplate.Handlers.csproj" />
     <ProjectReference Include="..\SolutionTemplate.Infra\SolutionTemplate.Infra.csproj" />
     <ProjectReference Include="..\SolutionTemplate.Shared\SolutionTemplate.Shared.csproj" />
