@@ -29,9 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="FakeData\" />
-    <Folder Include="HandlerTests\" />
-    <Folder Include="Mocks\" />
+    <ProjectReference Include="..\SolutionTemplate.Domain\SolutionTemplate.Domain.csproj" />
+    <ProjectReference Include="..\SolutionTemplate.Handlers\SolutionTemplate.Handlers.csproj" />
+    <ProjectReference Include="..\SolutionTemplate.TypeConverters\SolutionTemplate.TypeConverters.csproj" />
+    <ProjectReference Include="..\SolutionTemplate.Validations\SolutionTemplate.Validations.csproj" />
   </ItemGroup>
 
 </Project>

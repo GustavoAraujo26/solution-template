@@ -5,7 +5,7 @@ using SolutionTemplate.TypeConverters.Entities;
 
 namespace SolutionTemplate.TypeConverters.Profiles
 {
-    internal class ClientProfile : Profile
+    public class ClientProfile : Profile
     {
         public ClientProfile()
         {

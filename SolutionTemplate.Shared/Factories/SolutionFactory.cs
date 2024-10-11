@@ -15,7 +15,11 @@
 
             var solutionPathSplit = solutionFullPath.Split("\\");
 
-            return solutionPathSplit[solutionPathSplit.Length - 1];
+            var pathCount = 1;
+            if (IsUnitTest(solutionFullPath))
+                pathCount = 4;
+
+            return solutionPathSplit[solutionPathSplit.Length - pathCount];
         }
 
         public static string GetCurrentProjectPath()
@@ -36,5 +40,8 @@
             else
                 return solutionFullPath;
         }
+
+        private static bool IsUnitTest(string solutionPath) =>
+            solutionPath.ToLowerInvariant().Contains(".tests");
     }
 }

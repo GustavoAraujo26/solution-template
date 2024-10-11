@@ -10,7 +10,7 @@ using SolutionTemplate.Shared.Extensions;
 
 namespace SolutionTemplate.Handlers.Contracts
 {
-    internal sealed class CreateClientHandler : ICreateClientHandler
+    public sealed class CreateClientHandler : ICreateClientHandler
     {
         private readonly IMapper mapper;
         private readonly IValidator<CreateClientRequest> validator;

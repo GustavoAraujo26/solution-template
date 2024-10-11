@@ -6,15 +6,10 @@ using SolutionTemplate.Domain.Repositories;
 using SolutionTemplate.Domain.Requests;
 using SolutionTemplate.Domain.Responses;
 using SolutionTemplate.Shared.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SolutionTemplate.Handlers.Contracts
 {
-    internal sealed class DeleteClientHandler : IDeleteClientHandler
+    public sealed class DeleteClientHandler : IDeleteClientHandler
     {
         private readonly IMapper mapper;
         private readonly IClientRepository repository;

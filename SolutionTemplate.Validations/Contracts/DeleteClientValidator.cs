@@ -3,7 +3,7 @@ using SolutionTemplate.Domain.Requests;
 
 namespace SolutionTemplate.Validations.Contracts
 {
-    internal class DeleteClientValidator : AbstractValidator<DeleteClientRequest>
+    public class DeleteClientValidator : AbstractValidator<DeleteClientRequest>
     {
         public DeleteClientValidator()
         {

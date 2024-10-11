@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 using SolutionTemplate.Shared.Factories;
 using System.Reflection;
 
@@ -17,6 +18,26 @@ namespace SolutionTemplate.TypeConverters.Extensions
                 .ToArray();
 
             services.AddAutoMapper(profiles);
+        }
+
+        public static IMapper CreateMapperInstance(this MapperConfigurationExpression expression)
+        {
+            string solutionName = SolutionFactory.BuildName();
+            string subProjectName = $"{solutionName}.TypeConverters";
+            string profilesNamespace = $"{subProjectName}.Profiles";
+
+            var profiles = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(x => x.GetTypes())
+                .Where(x => x.Namespace == profilesNamespace)
+                .ToArray();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                foreach (var profile in profiles)
+                    cfg.AddProfile(profile);
+            });
+
+            return config.CreateMapper();
         }
     }
 }

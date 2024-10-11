@@ -3,7 +3,7 @@ using SolutionTemplate.Domain.Requests;
 
 namespace SolutionTemplate.Validations.Contracts
 {
-    internal class CreateClientValidator : AbstractValidator<CreateClientRequest>
+    public class CreateClientValidator : AbstractValidator<CreateClientRequest>
     {
         public CreateClientValidator()
         {
