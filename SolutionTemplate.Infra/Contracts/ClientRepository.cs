@@ -1,5 +1,5 @@
 ﻿using ArchitectureTools.Pagination;
-using SolutionTemplate.Domain.Entites;
+using SolutionTemplate.Domain.Entities;
 using SolutionTemplate.Domain.Repositories;
 using SolutionTemplate.Domain.Requests;
 using SolutionTemplate.Domain.Responses;

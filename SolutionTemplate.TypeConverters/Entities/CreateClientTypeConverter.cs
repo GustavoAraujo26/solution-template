@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using SolutionTemplate.Domain.Entites;
+using SolutionTemplate.Domain.Entities;
 using SolutionTemplate.Domain.Enums;
 using SolutionTemplate.Domain.Requests;
 

@@ -1,6 +1,6 @@
 ﻿using SolutionTemplate.Domain.Enums;
 
-namespace SolutionTemplate.Domain.Entites
+namespace SolutionTemplate.Domain.Entities
 {
     /// <summary>
     /// Entidade cliente

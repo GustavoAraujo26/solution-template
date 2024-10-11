@@ -1,5 +1,5 @@
 ﻿using Moq;
-using SolutionTemplate.Domain.Entites;
+using SolutionTemplate.Domain.Entities;
 using SolutionTemplate.Domain.Repositories;
 using SolutionTemplate.Tests.FakeData.Responses;
 

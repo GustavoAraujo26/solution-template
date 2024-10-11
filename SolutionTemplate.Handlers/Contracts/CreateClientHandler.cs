@@ -1,7 +1,7 @@
 ﻿using ArchitectureTools.Responses;
 using AutoMapper;
 using FluentValidation;
-using SolutionTemplate.Domain.Entites;
+using SolutionTemplate.Domain.Entities;
 using SolutionTemplate.Domain.Handlers;
 using SolutionTemplate.Domain.Repositories;
 using SolutionTemplate.Domain.Requests;
