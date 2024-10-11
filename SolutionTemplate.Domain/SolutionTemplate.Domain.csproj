@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<ProjectGuid>{fa8b28e9-9f6b-448e-96ec-ff11b7e50849}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>

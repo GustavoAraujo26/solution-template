@@ -1,6 +1,5 @@
 ﻿using Serilog;
 using Serilog.Events;
-using SolutionTemplate.Shared.Factories;
 
 namespace SolutionTemplate.Api.Extensions
 {
@@ -33,7 +32,6 @@ namespace SolutionTemplate.Api.Extensions
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Error)
                 .MinimumLevel.Override("System", LogEventLevel.Information)
                 .WriteTo.Console()
-                .WriteTo.File($"{SolutionFactory.BuildName()}.txt")
                 .CreateLogger();
 
             return newLogger;
