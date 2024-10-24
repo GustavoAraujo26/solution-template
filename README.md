@@ -78,7 +78,7 @@ Dessa forma, segue abaixo passo-a-passo do que fazer para criar o template da so
 
 ![Exportando sub-projeto](/Diagrams/Images/ProjectExport.png)
 
-    Na janela seguinte, customize os dados do template a ser exportado, como nome e ícone, e clique em *Finish*.
+Na janela seguinte, customize os dados do template a ser exportado, como nome e ícone, e clique em *Finish*.
 
 ![Preenchendo dados do template](/Diagrams/Images/ProjectExportLocation.png)
 
@@ -134,13 +134,13 @@ Dessa forma, segue abaixo passo-a-passo do que fazer para criar o template da so
 </VSTemplate>
 ``
 
-    Edite o conteúdo na seção *"ProjectCollection"*, para que a mesma referencie a todos os sub-projetos criados. Altere também as propriedades do projeto, como nome, descrição, etc, que estão no inicio do arquivo.
+Edite o conteúdo na seção *"ProjectCollection"*, para que a mesma referencie a todos os sub-projetos criados. Altere também as propriedades do projeto, como nome, descrição, etc, que estão no inicio do arquivo.
 
 6. Em seguida, em cada sub-projeto, é necessário alterar as referências que um sub-projeto faz a outro, para que utilize o nome que será criado no momento da criação da solução.
 
-    Exemplo: Se o sub-projeto A faz referência para o sub-projeto B e C, utilize o recurso de "Localizar e Substituir" do seu editor de texto favorito, dentro da pasta do sub-projeto da seguinte forma:
+Exemplo: Se o sub-projeto A faz referência para o sub-projeto B e C, utilize o recurso de "Localizar e Substituir" do seu editor de texto favorito, dentro da pasta do sub-projeto da seguinte forma:
 
-    De:
+De:
 
 ``
 <ItemGroup>
@@ -148,7 +148,7 @@ Dessa forma, segue abaixo passo-a-passo do que fazer para criar o template da so
 </ItemGroup>
 ``
 
-        Para:
+Para:
 
 ``
 <ItemGroup>
@@ -156,7 +156,7 @@ Dessa forma, segue abaixo passo-a-passo do que fazer para criar o template da so
 </ItemGroup>
 ``
 
-        Lembre-se de selecionar para substituir em todos os arquivos que forem encontrados com esse nome.
+Lembre-se de selecionar para substituir em todos os arquivos que forem encontrados com esse nome.
 
 7. Selecione todas as pastas dos sub-projetos, juntamente com o arquivo *".vstemplate"* e o ícone da solução, e zipe para um novo arquivo.
 
@@ -172,6 +172,6 @@ devenv /installvstemplates
 devenv /resetsettings
 ``
 
-        O primeiro comando instala o novo template, enquanto o segundo, reseta as configurações do perfil do usuário no Visual Studio.
+O primeiro comando instala o novo template, enquanto o segundo, reseta as configurações do perfil do usuário no Visual Studio.
 
 10. Agora é possível criar a solução customizada no Visual Studio. **Lembre-se:** ao criar a nova solução, selecione a opção *"Insert solution and project in the same directory"* para não criar uma nova pasta.
