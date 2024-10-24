@@ -90,49 +90,34 @@ Na janela seguinte, customize os dados do template a ser exportado, como nome e 
 
 5. Na raiz da pasta da solução, crie um arquivo chamado *"Root.vstemplate"* e cole no seu conteudo o código abaixo:
 
-``
-<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
- <TemplateData>
-  <Name>BaseApiTemplateCore8</Name>
-  <Description>Base template for a Web Api architecture in .NET Core 8</Description>
-  <ProjectType>CSharp</ProjectType>
-  <ProjectSubType>
-  </ProjectSubType>
-  <SortOrder>1000</SortOrder>
-  <CreateNewFolder>true</CreateNewFolder>
-  <DefaultName>Template</DefaultName>
-  <ProvideDefaultName>true</ProvideDefaultName>
-  <LocationField>Enabled</LocationField>
-  <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-  <Icon>__TemplateIcon.ico</Icon>
- </TemplateData>
- <TemplateContent>
-  <ProjectCollection>
-   <ProjectTemplateLink ProjectName="$safeprojectname$.Api" CopyParameters="true">
- BaseApiTemplateCore8.Api\MyTemplate.vstemplate
-   </ProjectTemplateLink>
-   <ProjectTemplateLink ProjectName="$safeprojectname$.Common" CopyParameters="true">
- BaseApiTemplateCore8.Common\MyTemplate.vstemplate
-   </ProjectTemplateLink>
-   <ProjectTemplateLink ProjectName="$safeprojectname$.Data" CopyParameters="true">
- BaseApiTemplateCore8.Data\MyTemplate.vstemplate
-   </ProjectTemplateLink>
-   <ProjectTemplateLink ProjectName="$safeprojectname$.Entities" CopyParameters="true">
- BaseApiTemplateCore8.Entities\MyTemplate.vstemplate
-   </ProjectTemplateLink>
-   <ProjectTemplateLink ProjectName="$safeprojectname$.Interfaces" CopyParameters="true">
- BaseApiTemplateCore8.Interfaces\MyTemplate.vstemplate
-   </ProjectTemplateLink>
-   <ProjectTemplateLink ProjectName="$safeprojectname$.Services" CopyParameters="true">
- BaseApiTemplateCore8.Services\MyTemplate.vstemplate
-   </ProjectTemplateLink>
-   <ProjectTemplateLink ProjectName="$safeprojectname$.Tests" CopyParameters="true">
- BaseApiTemplateCore8.Tests\MyTemplate.vstemplate
-   </ProjectTemplateLink>
-  </ProjectCollection>
- </TemplateContent> 
-</VSTemplate>
-``
+<code>
+
+    <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateData>
+            <Name>BaseApiTemplateCore8</Name>
+            <Description>Base template for a Web Api architecture in .NET Core 8</Description>
+            <ProjectType>CSharp</ProjectType>
+            <ProjectSubType>
+            </ProjectSubType>
+            <SortOrder>1000</SortOrder>
+            <CreateNewFolder>true</CreateNewFolder>
+            <DefaultName>Template</DefaultName>
+            <ProvideDefaultName>true</ProvideDefaultName>
+            <LocationField>Enabled</LocationField>
+            <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+            <Icon>__TemplateIcon.ico</Icon>
+        </TemplateData>
+        <TemplateContent>
+            <ProjectCollection>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Api" CopyParameters="true">BaseApiTemplateCore8.Api\MyTemplate.vstemplate</ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Common" CopyParameters="true">ateCore8.Common\MyTemplate.vstemplate</ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Data" CopyParameters="true">BaseApiTemplateCore8.Data\MyTemplate.vstemplate</ProjectTemplateLink>
+            </ProjectCollection>
+        </TemplateContent> 
+    </VSTemplate>
+
+</code>
+
 
 Edite o conteúdo na seção *"ProjectCollection"*, para que a mesma referencie a todos os sub-projetos criados. Altere também as propriedades do projeto, como nome, descrição, etc, que estão no inicio do arquivo.
 
@@ -142,19 +127,23 @@ Exemplo: Se o sub-projeto A faz referência para o sub-projeto B e C, utilize o 
 
 De:
 
-``
-<ItemGroup>
- <ProjectReference Include="..\SolutionTeste.Common\SolutionTeste.Common.csproj" />
-</ItemGroup>
-``
+<code>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SolutionTeste.Common\SolutionTeste.Common.csproj" />
+    </ItemGroup>
+
+</code>
 
 Para:
 
-``
-<ItemGroup>
- <ProjectReference Include="..\$ext_safeprojectname$.Common\$ext_safeprojectname$.Common.csproj" />
-</ItemGroup>
-``
+<code>
+
+    <ItemGroup>
+        <ProjectReference Include="..\$ext_safeprojectname$.Common\$ext_safeprojectname$.Common.csproj" />
+    </ItemGroup>
+
+</code>
 
 Lembre-se de selecionar para substituir em todos os arquivos que forem encontrados com esse nome.
 
@@ -164,13 +153,18 @@ Lembre-se de selecionar para substituir em todos os arquivos que forem encontrad
 
 9. Abra o prompt de comando para desenvolvedor do Visual Studio 2022 (*"Tool > Command Line > Developer Command Prompt"*). E execute os dois comandos abaixo:
 
-``
-devenv /installvstemplates
-``
+<code>
 
-``
-devenv /resetsettings
-``
+    devenv /installvstemplates
+
+</code>
+
+
+<code>
+
+    devenv /resetsettings
+    
+</code>
 
 O primeiro comando instala o novo template, enquanto o segundo, reseta as configurações do perfil do usuário no Visual Studio.
 
